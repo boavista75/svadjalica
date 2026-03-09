@@ -1,0 +1,208 @@
+﻿:root {
+  --page-bg: #e2a9f1;
+  --pill-bg: rgba(203, 108, 230, 0.5);
+  --button-bg: #cb6ce6;
+  --text-main: #ffffff;
+  --shadow: rgba(167, 81, 190, 0.28);
+}
+
+@font-face {
+  font-family: "Symphony";
+  src: url("./assets/fonts/Symphony-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Awesome Lathusca";
+  src: url("./assets/fonts/Awesome%20Lathusca.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: var(--page-bg);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text-main);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--page-bg);
+}
+
+.phone-frame {
+  width: min(100%, 393px);
+  min-height: 100vh;
+  padding: 38px 34px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--page-bg);
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 74px;
+}
+
+.brand {
+  margin: 0 0 8px;
+  font-family: "Symphony", cursive;
+  font-size: 4.5rem;
+  line-height: 0.9;
+  font-weight: 400;
+  color: var(--text-main);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.portrait-wrap {
+  width: 146px;
+  height: 119px;
+  border-radius: 62px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 16%;
+  transform: scale(1.22);
+}
+
+.metric-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.metric-block-gap {
+  margin-top: 36px;
+}
+
+.metric-label {
+  margin: 0 0 14px;
+  text-align: center;
+  font-family: "Awesome Lathusca", serif;
+  font-size: 1.58rem;
+  line-height: 1.05;
+  font-weight: 400;
+  color: var(--text-main);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pill {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  border-radius: 15px;
+  background: var(--pill-bg);
+  color: var(--text-main);
+  box-shadow: 0 12px 18px -16px var(--shadow);
+}
+
+.pill-date {
+  min-width: 118px;
+  padding: 7px 16px 10px;
+  font-family: "Awesome Lathusca", serif;
+  font-size: 1.72rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.pill-days {
+  min-width: 29px;
+  padding: 8px 10px 10px;
+  font-family: "Awesome Lathusca", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.reset-button {
+  margin-top: 82px;
+  width: 255px;
+  min-height: 55px;
+  border: 0;
+  border-radius: 14px;
+  padding: 0 18px 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--button-bg);
+  color: var(--text-main);
+  font-family: "Awesome Lathusca", serif;
+  font-size: 1.72rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 14px 22px -16px rgba(144, 55, 167, 0.75);
+}
+
+.reset-button:active {
+  transform: translateY(1px);
+}
+
+.reset-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+@media (max-width: 392px) {
+  .phone-frame {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero {
+    margin-top: 56px;
+  }
+
+  .brand {
+    font-size: clamp(3.5rem, 19vw, 4.5rem);
+  }
+
+  .portrait-wrap {
+    width: 136px;
+    height: 112px;
+  }
+
+  .metric-label {
+    font-size: clamp(1.2rem, 6vw, 1.58rem);
+    white-space: normal;
+  }
+
+  .reset-button {
+    width: min(255px, 100%);
+    font-size: clamp(1.32rem, 6.3vw, 1.72rem);
+  }
+}

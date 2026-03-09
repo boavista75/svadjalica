@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e2a9f1" />
+    <meta
+      name="description"
+      content="Svadjalica prati koliko je dana proslo od poslednje svadje."
+    />
+    <link rel="icon" href="./assets/images/app-icon.png" />
+    <link rel="apple-touch-icon" href="./assets/images/icon-192.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Svadjalica</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="phone-frame" aria-label="Svadjalica aplikacija">
+        <header class="hero">
+          <h1 class="brand">Svadjalica</h1>
+          <div class="portrait-wrap" aria-hidden="true">
+            <img
+              class="portrait"
+              src="./assets/images/couple.png"
+              alt=""
+              width="1024"
+              height="1536"
+            />
+          </div>
+        </header>
+
+        <section class="metric-block" aria-labelledby="last-date-label">
+          <h2 id="last-date-label" class="metric-label">POSLEDJA SVADJA SE DESILA</h2>
+          <p class="pill pill-date" id="lastDateValue">04.03.2026</p>
+        </section>
+
+        <section class="metric-block metric-block-gap" aria-labelledby="days-label">
+          <h2 id="days-label" class="metric-label">PROVEDENO DANA BEZ SVADJE</h2>
+          <p class="pill pill-days" id="daysValue">0</p>
+        </section>
+
+        <button class="reset-button" id="todayButton" type="button">
+          UNESI NOVU SVADJU
+        </button>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
