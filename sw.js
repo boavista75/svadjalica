@@ -1,16 +1,14 @@
-﻿const CACHE_NAME = "svadjalica-v3";
+﻿const CACHE_NAME = "svadjalica-v4";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./manifest.webmanifest",
+  "./design/svadjalicaicon.png",
   "./assets/fonts/Awesome%20Lathusca.ttf",
   "./assets/fonts/Symphony-Regular.ttf",
-  "./assets/images/app-icon.png",
-  "./assets/images/couple.png",
-  "./assets/images/icon-192.png",
-  "./assets/images/icon-512.png"
+  "./assets/images/couple.png"
 ];
 
 self.addEventListener("install", (event) => {
