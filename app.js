@@ -1,4 +1,5 @@
 ﻿const STORAGE_KEY = "svadjalica-last-date";
+const RESET_FLAG_KEY = "svadjalica-default-reset-2026-03-10";
 const DEFAULT_DATE = "2026-03-04";
 
 const lastDateValue = document.getElementById("lastDateValue");
@@ -31,6 +32,13 @@ function calculateDayDifference(fromDate, toDate) {
   return Math.max(0, Math.floor((toDate - fromDate) / millisecondsPerDay));
 }
 
+function ensureDefaultReset() {
+  if (!localStorage.getItem(RESET_FLAG_KEY)) {
+    localStorage.setItem(STORAGE_KEY, DEFAULT_DATE);
+    localStorage.setItem(RESET_FLAG_KEY, "done");
+  }
+}
+
 function getSavedDate() {
   return localStorage.getItem(STORAGE_KEY) || DEFAULT_DATE;
 }
@@ -56,6 +64,7 @@ if (!localStorage.getItem(STORAGE_KEY)) {
   localStorage.setItem(STORAGE_KEY, DEFAULT_DATE);
 }
 
+ensureDefaultReset();
 render();
 
 if ("serviceWorker" in navigator) {
