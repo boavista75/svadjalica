@@ -9,6 +9,11 @@
   "lang": "sr",
   "icons": [
     {
+      "src": "./design/svadjalicaicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
       "src": "./assets/images/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"

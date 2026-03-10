@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "svadjalica-v2";
+﻿const CACHE_NAME = "svadjalica-v3";
 const APP_ASSETS = [
   "./",
   "./index.html",
