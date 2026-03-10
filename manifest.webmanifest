@@ -9,7 +9,7 @@
   "lang": "sr",
   "icons": [
     {
-      "src": "./design/svadjalicaicon.png",
+      "src": "svadjalicaicon.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }

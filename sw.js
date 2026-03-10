@@ -5,7 +5,7 @@ const APP_ASSETS = [
   "./styles.css",
   "./app.js",
   "./manifest.webmanifest",
-  "./design/svadjalicaicon.png",
+  "svadjalicaicon.png",
   "./assets/fonts/Awesome%20Lathusca.ttf",
   "./assets/fonts/Symphony-Regular.ttf",
   "./assets/images/couple.png"
